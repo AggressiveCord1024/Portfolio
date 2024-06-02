@@ -10,6 +10,8 @@ import githubLight from "../../assets/github-light.svg"
 import githubDark from "../../assets/github-dark.svg"
 import ResumeRohit from "../../assets/ResumeRohit.pdf"
 import { useTheme } from "../../common/ThemeContext"
+import { ReactTyped } from "react-typed";
+
 
 function Hero() {
 
@@ -20,6 +22,7 @@ function Hero() {
   const githubIcon = theme === 'light' ? githubLight : githubDark;
   const linkedInIcon = theme === 'light' ? linkedinLight : linkedinDark;
 
+
   return (
     <section id="hero" className={styles.container}>
       <div className={styles.colorModeContainer}>
@@ -27,9 +30,17 @@ function Hero() {
         <img className={styles.colorMode} src={themeIcon} alt="Color Mode Icon" onClick={toggleTheme}/>
       </div>
       <div className={styles.info}>
-         <h1>Rohit Yadav</h1>
-         <h2>Full Stack Developer</h2>
-         <span>
+         <h1>Rohit Vinod Yadav</h1>
+         <h2>I am {""}
+        <ReactTyped
+          strings={["Full Stack Developer","Web Developer","UI-UX Designer","Backend Developer","Coder",]}
+          typeSpeed={100}
+          loop
+          backSpeed={80}
+          cursorChar='|'
+          showCursor={true}
+        /></h2>
+         <span className={styles.spanner}>
           <a href="https://twitter.com/@Rohitvy_1204" target="_blank">
             <img src={twitterIcon} alt="Twitter Icon" />
           </a>

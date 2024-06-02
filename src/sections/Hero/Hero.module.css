@@ -11,7 +11,7 @@
       max-width: 200px;
     }
   
-    span {
+    .spanner {
       display: flex;
       gap: 25px;
       justify-content: center;
@@ -69,11 +69,13 @@
   
   .description {
     max-width: 24ch;
+    
   }
   
   .info {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
   }
 
